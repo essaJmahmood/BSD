@@ -15,15 +15,15 @@ namespace ConsoleApp1
             //taking input
             Console.Write("enter you name: ");
             name = Console.ReadLine();
-            Console.Write("enter your yearth of birth :");
-            yearOfBirthInt = int.Parse(Console.ReadLine());
+            Console.Write("enter your age :");
+            age = int.Parse(Console.ReadLine());
             
             //validate year of birth
             for (; ;)
             {
-                if(yearOfBirthInt>thisYear)
+                if(age<=0)
                 {
-                    Console.Write("please, enter your year of birth correctly:");
+                    Console.Write("please, enter your age correctly:");
                     yearOfBirthInt = int.Parse(Console.ReadLine());
                 }
                 else
@@ -31,12 +31,12 @@ namespace ConsoleApp1
                     break;
                 }
             }
-            
+
             //calculate age
-            age = thisYear - yearOfBirthInt;
+            yearOfBirthInt = thisYear - age;
 
             //print the result
-            Console.WriteLine(@"your name is : " + name + ", and you are " + age + " years old");
+            Console.WriteLine("your name is : " + name + ", and your year of brith is " + yearOfBirthInt );
         }
     }
 }
